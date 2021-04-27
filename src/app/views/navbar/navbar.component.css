@@ -1,0 +1,91 @@
+/* You can add global styles to this file, and also import other style files */
+
+.body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lista .meu-dia {
+    --icon-color: rgb(0, 110, 255);
+    --bg-color-active: rgba(0, 110, 255, 0.11);
+}
+
+.lista .importante {
+    --icon-color: rgb(146, 9, 128);
+    --bg-color-active: rgba(252, 168, 255, 0.438);
+}
+
+[data-theme="blue"] {
+    --primary: rgb(0, 110, 255);
+    --secondary: rgb(4, 74, 167);
+    --bg: rgba(0, 110, 255, 0.11);
+    --bg-item: rgb(241, 247, 255);
+}
+
+.painel {
+    background: var(--bg) !important;
+}
+
+.menu {
+    width: 30%;
+}
+
+.painel {
+    flex: auto;
+    background: gainsboro;
+}
+
+.lista .item {
+    margin-bottom: 2px;
+    padding: 0px 20px 0 20px;
+    display: flex;
+    height: 45px;
+    align-items: center;
+    position: relative;
+    transition: .1s linear;
+}
+
+.lista .item:active{
+    padding-left: 25px;
+    transition: .1s linear;
+}
+
+.lista .item p {
+    padding: 0px;
+    margin: 0px;
+    font-size: 15px;
+    transition: .3s linear;
+}
+
+.lista .item:hover {
+    background: rgb(228, 228, 228);
+}
+
+.lista .item i {
+    padding-right: 10px;
+    font-weight: bold;
+    color: var(--icon-color);
+}
+
+.lista .active {
+    font-weight: bold !important;
+    color: var(--icon-color);
+    background-color: var(--bg-color-active) !important;
+}
+
+.lista .active p::before {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    content: "";
+    height:60%;
+    width: 2px;
+    background-color: var(--icon-color) !important;
+}
+
